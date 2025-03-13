@@ -160,15 +160,15 @@ int main(int argc, char *argv[]) {
   {
     //设置GS工作模式（非GS雷达请无视该代码）
     int i_v = 0;
-    node->declare_parameter("m1_mode");
+    node->declare_parameter("m1_mode", i_v);
     node->get_parameter("m1_mode", i_v);
     laser.setWorkMode(i_v, 0x01);
     i_v = 0;
-    node->declare_parameter("m2_mode");
+    node->declare_parameter("m2_mode", i_v);
     node->get_parameter("m2_mode", i_v);
     laser.setWorkMode(i_v, 0x02);
     i_v = 1;
-    node->declare_parameter("m3_mode");
+    node->declare_parameter("m3_mode", i_v);
     node->get_parameter("m3_mode", i_v);
     laser.setWorkMode(i_v, 0x04);
     //启动扫描
